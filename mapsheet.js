@@ -236,13 +236,15 @@
 				  
 			var pinColor = ABIcolor(point.model.abi);
 			var pinImage = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=|" + pinColor,
-	        new google.maps.Size(21, 34),
-	        new google.maps.Point(0,0),
-	        new google.maps.Point(10, 34));
-	    var pinShadow = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_shadow",
-	        new google.maps.Size(40, 37),
-	        new google.maps.Point(0, 0),
-	        new google.maps.Point(12, 35));	 
+			 new google.maps.Size(21, 34),
+	        	new google.maps.Point(0,0),
+	        	new google.maps.Point(10, 34),
+	        	new google.maps.Size(42, 68));
+	    		var pinShadow = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_shadow",
+			new google.maps.Size(40, 37),
+			new google.maps.Point(0, 0),
+			new google.maps.Point(12, 35),
+			new google.maps.Size(80, 74));	 
 	  		
 	  		marker.setShadow(pinShadow);
 			marker.setIcon(pinImage);
