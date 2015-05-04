@@ -19,10 +19,13 @@
       }
     </style>
 
-    <!-- This is the popup you'll get when you click a marker. 
-         {{these}} are columns in your spreadsheet -->
-    <script id="popup-template" type="text/x-handlebars-template">
+   <script id="popup-template" type="text/x-handlebars-template">
       <h3>ABI: {{abi}}</h3>
+      
+      <a style="text-decoration: none; font-weight:bold;" href="report.html?id={{row}}">Ver el registro completo.</a>
+   
+   <!--    <a style="text-decoration: none; font-weight:bold;" href="https://spreadsheets.google.com/tq?tqx=out:html&tq=select * LIMIT 1 OFFSET {{row}}&key=1QS2hkP5EsiJFSOFEIxppyET3gd9jVWBASOPlbBEjsWE&gid=0">Ver el registro completo.</a> -->
+   
       <p>Fecha: {{fecha}}</p>
       <p>Hora: {{hora}}</p>
       <p>Notas: {{notas}}</p>

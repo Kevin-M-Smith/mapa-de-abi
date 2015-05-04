@@ -236,14 +236,14 @@
 				  
 			var pinColor = ABIcolor(point.model.abi);
 			var pinImage = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=|" + pinColor,
-			new google.maps.Size(21, 34),
+			new google.maps.Size(31.5, 51),
 	        	new google.maps.Point(0, 0),
-	        	new google.maps.Point(0, 0),
-	        	new google.maps.Size(42, 68));
+	        	new google.maps.Point(10, 51),
+	        	new google.maps.Size(31.5, 51));
 	    		var pinShadow = new google.maps.MarkerImage("http://chart.apis.google.com/chart?chst=d_map_pin_shadow",
-			new google.maps.Size(40, 37),
+			new google.maps.Size(80, 74),
 			new google.maps.Point(0, 0),
-			new google.maps.Point(0, 0),
+			new google.maps.Point(12, 70),
 			new google.maps.Size(80, 74));	 
 	  		
 	  		marker.setShadow(pinShadow);
@@ -301,7 +301,8 @@
 		drawPoints: function(points) {
 			console.log(points);
 			for(var i = 0; i < points.length; i++) {
-				if(!points[i].isValid()) { continue; }
+				if(!points[i].isValid()) { continue; }			
+				points[i].model.row = i;
 				var marker = this.drawMarker(points[i]);
 				marker.setMap(this.map);
 				this.bounds.extend(marker.position);
