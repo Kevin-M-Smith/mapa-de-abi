@@ -106,11 +106,11 @@
 		},
 
 		latitude: function() {
-			return parseFloat( this.model["latitude"] || this.model["lat"] );
+			return parseFloat( this.model["latitude"] || this.model["lat"] || this.model["Latitud"] );
 		},
 
 		longitude: function() {
-			return parseFloat( this.model["longitude"] || this.model["lng"] || this.model["long"] || this.model['lon'] );
+			return parseFloat( this.model["longitude"] || this.model["lng"] || this.model["long"] || this.model['lon'] || this.model["Longitud"]);
 		},
 	
 		get: function(fieldName) {
