@@ -12,7 +12,8 @@
     <!-- This is where the map will go -->
     <div id="map"></div>
     <div style="z-index: 10; position: absolute; right: 0;  bottom: 0;">
-    	<img src="img/escala.png">
+    	<img id='legend' src="img/escala.png">
+    	<img id='block' src="img/block.png">
     </div>
     
     <style>
@@ -36,7 +37,21 @@
 
     <!-- Okay, time to do this! -->
     <script type="text/javascript">
-      $(document).ready( function() {       
+      $(document).ready( function() {     
+      
+      	$("#block").hide();  
+      
+      	$("#legend").click( function(){
+      		$("#legend").hide();
+      		$("#block").show();
+      	});
+      	
+      	$("#block").click( function(){
+      		$("#block").hide();
+      		$("#legend").show();
+      	});
+      
+      
         // Make sure the spreadsheet is published!
         var published_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1QS2hkP5EsiJFSOFEIxppyET3gd9jVWBASOPlbBEjsWE/pubhtml'; 
 
