@@ -399,8 +399,8 @@
 			
 			if(point.click) {
 			  marker.on('click', function(e) {
-          point.click.call(this, e, point);
-        });
+          			point.click.call(this, e, point);
+        			});
 			}
 			// var icon = L.icon();
 			// marker.setIcon(icon);
