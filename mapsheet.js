@@ -237,11 +237,11 @@
             var pinColor = marker.point.get('hexcolor') || "FE7569";
             pinColor = pinColor.replace('#', '');
 
-            var pinImage = new google.maps.MarkerImage("https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=|" + pinColor,
+            var pinImage = new google.maps.MarkerImage("https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=|" + pinColor,
                 new google.maps.Size(21, 34),
                 new google.maps.Point(0, 0),
                 new google.maps.Point(10, 34));
-            var pinShadow = new google.maps.MarkerImage("https://chart.apis.google.com/chart?chst=d_map_pin_shadow",
+            var pinShadow = new google.maps.MarkerImage("https://chart.googleapis.com/chart?chst=d_map_pin_shadow",
                 new google.maps.Size(40, 37),
                 new google.maps.Point(0, 0),
                 new google.maps.Point(12, 35));
@@ -269,12 +269,12 @@
             function colorize(marker) {
 
                 var pinColor = ABIcolor(point.model.IBA);
-                var pinImage = new google.maps.MarkerImage("https://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=|" + pinColor,
+                var pinImage = new google.maps.MarkerImage("chart.googleapis.com/chart?chst=d_map_pin_letter&chld=|" + pinColor,
                     new google.maps.Size(31.5, 51),
                     new google.maps.Point(0, 0),
                     new google.maps.Point(15.75, 51),
                     new google.maps.Size(31.5, 51));
-                var pinShadow = new google.maps.MarkerImage("https://chart.apis.google.com/chart?chst=d_map_pin_shadow",
+                var pinShadow = new google.maps.MarkerImage("chart.googleapis.com/chart?chst=d_map_pin_shadow",
                     new google.maps.Size(80, 74),
                     new google.maps.Point(0, 0),
                     new google.maps.Point(12, 70),
